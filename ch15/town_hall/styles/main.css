@@ -139,7 +139,7 @@ footer {
 		        brightness(125%); 
 		transform: scale(1.1);
 	}
-}	
+}
 
 .large {
 	font-size: 125%;
@@ -167,7 +167,7 @@ footer {
 	& a:link, a:visited { 
 		color: var(--light_menu);
 	}
-	& a:hover, a:focus, a.current {
+	& a:hover, a:focus, a:not([href]) {
 		background-color: var(--mid_menu);
 		color: var(--dark_menu);
 	}
@@ -280,8 +280,9 @@ footer {
 			margin: .75em 1em;
 		}
 	}
+}
 
-	@media only screen and (prefers-reduced-motion) {
+@media only screen and (prefers-reduced-motion) {
 	aside {
 		& img { transition: none; }
 		& img:hover { transform: none; }
@@ -289,5 +290,4 @@ footer {
 	.speaker {
 		& img { animation: none; }
 	}
-}
 }
